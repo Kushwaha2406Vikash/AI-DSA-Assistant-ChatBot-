@@ -42,7 +42,7 @@ export function ChatPage() {
     setLoading(true);
 
     try {
-      const res = await axios.post("API_BASE_URL/api/aichat", {
+      const res = await axios.post(`${API_BASE_URL}/api/aichat`, {
         message: input,
       });
       const botMessage = { role: "bot", content: res.data.reply };
