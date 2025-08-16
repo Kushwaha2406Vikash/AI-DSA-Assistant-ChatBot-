@@ -6,7 +6,7 @@ import rehypeHighlight from "rehype-highlight";
 import { motion, AnimatePresence } from "framer-motion";
 import "highlight.js/styles/github-dark.css";
 import axios from "axios";
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 export function ChatPage() {
   const [messages, setMessages] = useState([{
       role: "bot",
@@ -42,7 +42,7 @@ export function ChatPage() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/aichat", {
+      const res = await axios.post("API_BASE_URL/api/aichat", {
         message: input,
       });
       const botMessage = { role: "bot", content: res.data.reply };
