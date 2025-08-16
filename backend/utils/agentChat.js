@@ -86,7 +86,7 @@ Give the answer: most precious, using minimal tokens.
 
     // ✅ Extract the AI text
   const textOutput = result.response.text();
-  console.log(textOutput);
+//  console.log(textOutput);
 
   return textOutput;
 
