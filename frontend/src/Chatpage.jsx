@@ -136,12 +136,13 @@ export function ChatPage() {
         <div className="flex items-end gap-2">
           <textarea
             ref={textareaRef}
-            className="flex-1 bg-gray-700 text-white rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none max-h-32"
-            rows={1}
+            className="flex-1 bg-gray-700 text-white rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none max-h-32 h-48"
+            
             placeholder="Ask me about DSA..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyPress}
+            style={{ height: "auto" }}
           />
           <button
             onClick={sendMessage}
